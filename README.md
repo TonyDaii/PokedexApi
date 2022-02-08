@@ -1,6 +1,5 @@
 # PokedexApi
  
-# PokedexApi
 
 Site pokedex en utilisant l'API pokéApi
  
