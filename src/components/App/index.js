@@ -1,6 +1,9 @@
 import "./style.scss";
 import { useState, useEffect } from "react";
 import axios from "axios";
+import { Route, Routes } from "react-router-dom";
+import PokemonDetails from "../PokemonDetails";
+import Pokemons from "../Pokemons"
 
 export default function App() {
   const [allPokemons, setAllPokemons] = useState([]);
@@ -22,8 +25,14 @@ export default function App() {
     }, []);
 
     return (
-        <div className="app">
-            hello world
-        </div>
-    );
+      <div className="app">
+          <Routes>
+              <Route path="/" element={<Pokemons pokemon={allPokemons} />} />
+              <Route
+                  path="/detail/:slug"
+                  element={<PokemonDetails PokemonInformation={allPokemons} />}
+              />
+          </Routes>
+      </div>
+  );
 }

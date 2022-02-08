@@ -1,0 +1,43 @@
+.pokemon {
+    display: flex;
+    flex-wrap: wrap;
+    transition: transform 0.2s;
+    &-card {
+      width: 10rem;
+      font-weight: bold;
+      border-radius: 10px;
+      background-color: #982c2c;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      margin: 0.8rem;
+      padding: 0.8rem;
+      color: white;
+    }
+    &-type {
+      display: flex;
+      justify-content: space-around;
+    }
+    &-typeone {
+      border-radius: 4px;
+      padding: 3px 5px 3px 5px;
+    }
+    &-typetwo {
+      padding: 3px 4px 3px 4px;
+      border-radius: 4px;
+    }
+    &-name {
+      font-size: larger;
+      padding-top: 1rem;
+    }
+    &-number {
+      font-size: large;
+    }
+  }
+  
+  .pokemon-card:hover {
+    background-color: #ab2020;
+    transition: transform 0.3s;
+    transform: scale(1.1);
+  }
+  

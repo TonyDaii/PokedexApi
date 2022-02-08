@@ -1,9 +1,9 @@
 import "./style.scss";
 
-export default function PokemonDetails() {
+export default function PokemonDetails({ PokemonInformation }) {
     return (
         <div>
-            Hello world
+            hello, world
         </div>
-    );
+    )
 }
