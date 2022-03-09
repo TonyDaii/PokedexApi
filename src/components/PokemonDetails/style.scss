@@ -1,6 +1,7 @@
 .poke {
     display: flex;
     flex-direction: column;
+    justify-content:space-between;
     width: 1500px;
     &-title{
       display: flex;
@@ -80,22 +81,25 @@
       justify-content: space-between;
   }
   
-  .changepage{
+  .back{
     margin-top: 50px;
     display: flex;
     justify-content: center;
-    font-weight: bold;
-    color: white;
-    padding: 5px;
-    font-size: x-large;
+    &-button{
+      background-color: #c14040;
+      border: none;
+      font-size: x-large;
+      font-weight: bold;
+      color: white;
+    }
+    &-button:hover{
+      transition: transform 0.3s;
+      transform: scale(1.1);
+      color: #ab2020;
+    }
   }
   
-  .changepage:hover{
-    color: #881717;
-    transition: transform .3s;
-    transform: scale(1.1);
-  }
-  
+
   .progress{
     margin-bottom: 5px;
     display: flex;

@@ -1,6 +1,7 @@
 .pokemon {
     display: flex;
     flex-wrap: wrap;
+    justify-content:space-between;
     transition: transform 0.2s;
     &-card {
       width: 10rem;
@@ -40,4 +41,3 @@
     transition: transform 0.3s;
     transform: scale(1.1);
   }
-  

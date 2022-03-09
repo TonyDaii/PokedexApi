@@ -1,6 +1,7 @@
 import "./style.scss";
 
 import { Link } from "react-router-dom";
+import { useParams } from "react-router";
 import PropTypes from "prop-types";
 
 const PokemonTypeColors = {
@@ -25,9 +26,16 @@ const PokemonTypeColors = {
 };
 
 
-export default function Pokemons({ pokemon }) {
+export default function PokemonType({ pokeType }) {
+    const { slug } = useParams();
+    const filteredType = pokeType.filter((type) => {
+        for(const type1 of type.types) {
+            if(type1.type.name === slug)
+                return type1
+        }
+    })
 
-  const jsxPokemon = pokemon.map((data) => (
+    const jsxPokemon = filteredType.map((data) => (
     <Link
       style={{ textDecoration: "none" }}
       key={data.id}
@@ -98,6 +106,6 @@ export default function Pokemons({ pokemon }) {
   );
 }
 
-Pokemons.propTypes = {
-  pokemon: PropTypes.array.isRequired,
+PokemonType.propTypes = {
+    pokeType: PropTypes.array.isRequired,
 };

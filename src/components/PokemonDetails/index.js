@@ -131,9 +131,12 @@ export default function PokemonDetails({ PokemonInformation }) {
           </div>
         </div>
       </div>
-      <Link style={{ textDecoration: "none" }} to="/" className="changepage">
-        Back to the list
-      </Link>
+      <div className="back">
+        <Link style={{ textDecoration: "none" }} to="/" className="back-button">
+          Back to the list
+        </Link>
+      </div>
+      
     </div>
   ));
 
